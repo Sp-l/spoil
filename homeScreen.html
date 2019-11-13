@@ -29,27 +29,26 @@
                 
                 <div id="food-container">
                     <h2 class="container-title">Your Items</h2>
-                    <div id="add_item-button">
-                        <button onclick="add_Item">
-                            <img src="ref_images/add_button.png" width="35px" height="35px">
+                    <div id="foodForm">
+                        <button id="add_item-button" onclick="openForm()">
+                            <img src="ref_images/add_button.png" height="30px" width="30px">
                         </button>
+                        <div id="popupContact">
+                            <!-- Contact Us Form -->
+                            <form action="#" id="form" method="post" name="form">
+                                <img id="close" src="ref_images/close_button.png" onclick ="closeForm()">
+                                <h2>Add Item</h2>
+                                <hr>
+                                    <input id="name" name="name" placeholder="Name" type="text">
+                                    <input id="food_group" name="food_group" placeholder="Food Group" type="text">
+                                    <textarea id="msg" name="message" placeholder="Message"></textarea>
+                                    <a href="javascript:%20check_empty()" id="submit">Confirm</a>
+                            </form>
+                        </div>
+                                    <!-- Popup Div Ends Here -->
                     </div>
                 </div>
 
-                <div class="form-popup" id="myForm">
-                        <form action="/action_page.php" class="form-container">
-                          <h1>Login</h1>
-                      
-                          <label for="email"><b>Email</b></label>
-                          <input type="text" placeholder="Enter Email" name="email" required>
-                      
-                          <label for="psw"><b>Password</b></label>
-                          <input type="password" placeholder="Enter Password" name="psw" required>
-                      
-                          <button type="submit" class="btn">Login</button>
-                          <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-                        </form>
-                      </div>
             </div>
         </div>
     </body>
