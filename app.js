@@ -16,7 +16,7 @@ function openForm() {
 
 function closeForm() {
     if (__openStatus__ == true) {
-        document.getElementById('foodForm').style.display = "none"
+        document.getElementById('foodForm').style.display = "none";
     }
 };
 
@@ -28,6 +28,10 @@ function check_empty() {
         document.getElementById('foodForm').submit();
         alert("Form Submitted Successfully");
     }
+};
+
+function getInput() {
+
 };
 
 __init__();

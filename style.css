@@ -83,11 +83,10 @@ body {
 
 /* Add item button styling */
 #add_item-button {
+    position: relative;
     height: 30px;
     width: 30px;
     padding: 5px;
-    margin-left: 33%;
-    margin-top: 50%;
     background: none;
 }
 
@@ -106,10 +105,12 @@ body {
 /* Generic container title */
 .container-title {
     text-align: center;
-    padding: 5px;
+    padding: 0px;
     color: #6f8f77;
     text-shadow: 1px 2px #666b67;
     font-size: 35px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #foodForm {
@@ -125,7 +126,7 @@ body {
 }
 
 img#close {
-    position:relative;
+    position:absolute;
     right:-14px;
     top:-14px;
     cursor:pointer;
@@ -134,7 +135,7 @@ img#close {
 }
 
 div#formWindow {
-    position:relative;
+    position:absolute;
     left:50%;
     top:17%;
     margin-left:-202px;
