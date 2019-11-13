@@ -29,3 +29,5 @@ function check_empty() {
         alert("Form Submitted Successfully");
     }
 };
+
+__init__();

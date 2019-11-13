@@ -78,15 +78,17 @@ body {
     color: #d5e6da;
     text-shadow: 2px 5px #666b67;
     font-size: 50px;
+    margin-bottom: 5px;
 }
 
 /* Add item button styling */
 #add_item-button {
-    height: 100%;
-    width: 100%;
+    height: 30px;
+    width: 30px;
     padding: 5px;
     margin-left: 33%;
     margin-top: 50%;
+    background: none;
 }
 
 /* Food list container */
@@ -123,7 +125,7 @@ body {
 }
 
 img#close {
-    position:absolute;
+    position:relative;
     right:-14px;
     top:-14px;
     cursor:pointer;
@@ -131,8 +133,8 @@ img#close {
     width: 30px;
 }
 
-div#popupContact {
-    position:absolute;
+div#formWindow {
+    position:relative;
     left:50%;
     top:17%;
     margin-left:-202px;
