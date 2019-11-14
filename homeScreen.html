@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Spoil</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-         <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="description" content="Food management and expiration visualization">
-        <meta name="authors" content="Anam Khan, Anthony Verillo, Graham Burleigh">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
 
-    <body>
-        <div id="screen">
-            <div id="head-bar">
-                <p id="inventory-button">Inventory</p>
-                <p id="home-button">
+<head>
+    <title>Spoil</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="Food management and expiration visualization">
+    <meta name="authors" content="Anam Khan, Anthony Verrillo, Graham Burleigh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="screen">
+        <div id="head-bar">
+            <p id="inventory-button">Inventory</p>
+            <p id="home-button">
                 <a href="homeScreen.html">
                     <img id="home-button-img" src="ref_images/home_button.png">
                 </a>
-                </p>
-                <p id="grocery-button">Grocery List</p>
+            </p>
+            <p id="grocery-button">Grocery List</p>
+        </div>
+        <div id="main-container">
+            <div id="title-container-main">
+                Spoil
             </div>
-
+            <div id="fact-window">
+                <p>Roughly one third of the food produced in the world for human consumption every year – approximately 1.3 billion tonnes – gets lost or wasted.</p>
+            </div>
             <div id="food-container">
-                <div id="add_item-button">
-                    <img src="ref_images/add_button.png">
+                <div id="food-container-title">
+                        <h3>Your Items</h3>
+                        <button id="add_item-button" onclick="openForm()">
+                                <img src="ref_images/add_button.png" height="30px" width="30px">
+                        </button>
+                    </div>
+                <div id="item-tip">
+                    <p>Your items will appear here as they are added</p>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+<script src="app.js"></script>
+
+<!--                <div id="foodForm">
+                    <div id="formWindow">
+                        <form action="#" id="form" method="post" name="form">
+                            <img id="close" src="ref_images/close_button.png" onclick="closeForm()">
+                            <h2>Add Item</h2>
+                            <hr>
+                            <input id="name" name="name" placeholder="Name" type="text">
+                            <input id="food_group" name="food_group" placeholder="Food Group" type="text">
+                            <textarea id="msg" name="message" placeholder="Message"></textarea>
+                            <a href="javascript:%20check_empty()" id="submit">Confirm</a>
+                        </form>
+                    </div>
+                </div>-->
+
 </html>
