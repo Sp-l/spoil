@@ -159,6 +159,42 @@ body {
     border: 1px solid black;
 }
 
+#add-form {
+    background-color: whitesmoke;
+    text-align: center;
+    position: relative;
+    color: #6b8772;
+    text-shadow: 1px 1px #969e98;
+    width: 50%;
+    height: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+#food-list {
+    background-color: #d5e6da;
+    border: 1px solid black;
+    position: relative;
+    width: 44.25%;
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 5px;
+}
+
+#food-list > h4 {
+    text-align: center;
+    color: #6b8772;
+    text-shadow: 1px 1px #969e98;
+    font-size: 150%;
+}
+
+
 /*
 #foodForm {
     width:100%;
