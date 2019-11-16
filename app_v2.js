@@ -2,12 +2,12 @@ var itemList = [];
 var __openStatus__ = false;
 
 function __init__() {
-    document.getElementById('foodForm').style.display = "none";
+    document.getElementById('add-form').style.display = "none";
 };
 
 function openForm() {
     if (__openStatus__ == false) {
-        document.getElementById('foodForm').style.display = "block";
+        document.getElementById('add-form').style.display = "block";
     }
     else {
         console.log("Already open");
@@ -16,7 +16,7 @@ function openForm() {
 
 function closeForm() {
     if (__openStatus__ == true) {
-        document.getElementById('foodForm').style.display = "none";
+        document.getElementById('add-form').style.display = "none";
     }
 };
 
@@ -25,7 +25,7 @@ function check_empty() {
         alert("Fill All Fields !");
     } 
     else {
-        document.getElementById('foodForm').submit();
+        document.getElementById('add-form').submit();
         alert("Form Submitted Successfully");
     }
 };

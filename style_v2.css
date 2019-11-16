@@ -136,7 +136,7 @@ body {
 }
 
 /* Add item button styling */
-#add_item-button {
+#add-item-button {
     position: relative;
     height: 30px;
     width: 30px;
@@ -185,6 +185,7 @@ body {
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 5px;
+    display: inline-block;
 }
 
 #food-list > h4 {
@@ -192,9 +193,29 @@ body {
     color: #6b8772;
     text-shadow: 1px 1px #969e98;
     font-size: 150%;
+    background-color: whitesmoke;
+    width: 70%;
+    height: 120%;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-left: 7%;
 }
 
+.list-item {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 3px;
+    width: 60%;
+    margin-left: 7%;
+}
 
+.item-group-img {
+
+}
+.list-expiration {
+
+}
 /*
 #foodForm {
     width:100%;
