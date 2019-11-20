@@ -267,11 +267,14 @@ body {
     margin: 3px;
     width: 60%;
     margin-left: 7%;
-    display: inline-block;
+    display: block;
 }
 
-.item-group-img {
-
+.group-img {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    display: block;
 }
 /*.list-tem > p {
     display: inline-block;

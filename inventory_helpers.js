@@ -1,6 +1,11 @@
-var itemList = [];
+var itemList = document.getElementById('food-list');
 var listCounter = 1;
 var __openStatus__ = false;
+var checkedOkay = false;
+var foodName = document.getElementById('food-name').value;
+var expData = document.getElementById('expiration-date').value;
+var foodGroup = document.getElementById('group-name');
+var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
 
 function __init__() {
     document.getElementById('add-form').style.display = "none";
@@ -27,26 +32,33 @@ function closeForm() {
 }
 
 function checkEmpty() {
-    if (document.getElementById('name').value == "" || document.getElementById('date').value == "") {
-        alert("Fill All Fields !");
-    } 
+    if (expData == null || foodGroup == null || foodName == null) {
+        alert("Fill All Fields!");
+        checkedOkay = false;
+    }
     else {
-        document.getElementById('add-form').submit();
-        alert("Form Submitted Successfully");
+        console.log("Submitted successfully");
+        checkedOkay = true;
     }
 }
 
-function getInput() {
-    var foodName = document.getElementById('food-name').value;
-    var expData = document.getElementById('expiration-date').value;
-    var foodGroup = document.getElementById('food-group').value;
-//    document.getElementById('food-list').style.display = "block";
+function openForm() {
+    document.getElementById('food-list').style.display = "block";
     console.log("Submitted!");
 }
 
 function addListItem() {
-    document.getElementById('list-name-'+listCounter).innerHTML = foodName;
-    document.getElementById('list-expiration-'+listCounter).innerHTML = expData;
+    if (checkedOkay == true) {
+        openForm();
+        document.getElementById('list-name-'+listCounter).innerHTML = foodName;
+        document.getElementById('list-expiration-'+listCounter).innerHTML = expData;
+        document.getElementById('list-group-'+listCounter).innerHTML = selectedGroup;
+        ++listCounter;
+    }
+    else {
+        console.log("Didn't pass check");
+    }
+    
 //    document.getElementById('group-img-'+listCounter).src = 
 }
 

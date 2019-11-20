@@ -43,16 +43,22 @@
                     <div id="item-tip">
                         <p>Your items will appear here as they are added</p>
                     </div>
-                    <button id="add-item-button" onclick="openForm()">
+                    <button id="add-item-button" onclick="openForm()" type="button">
                             <img src="ref_images/add_button.png" height="30px" width="30px">
                     </button>
-                    <form id="add-form" onsubmit="getInput()">
+                    <form id="add-form" onsubmit="checkEmpty()" onsubmit="return false">
                         <h3>Add Item</h3>
                         <input id="food-name" placeholder="Name" type="text">
-                        <input id="group-name" placeholder="Food Group" type="text">
+                        <select id="group-name">
+                            <option>Fruits</option>
+                            <option>Veggies</option>
+                            <option selected="selected">Meat</option>
+                            <option>Dairy</option>
+                            <option>Grain</option>
+                        </select>
                         <input id="expiration-date" placeholder="Expiration Date" type="text">
-                        <input id="submit-button" placeholder="Submit" type="submit" onclick="checkEmpty()">
-                        <button id="close-button" onclick="closeForm()">
+                        <input id="submit-button" placeholder="Submit" type="submit" onclick="addListItem()">
+                        <button id="close-button" onclick="closeForm()" type="button">
                         <img src="ref_images/close_button.png">
                         </button>
                     </form>
@@ -60,19 +66,22 @@
                         <ul id="food-list">
                             <h4>Inventory</h4>
                             <li class="list-item">
-                                <img src="" id="group-img-1">
+                                <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-1">Item</p>
                                 <p id="list-expiration-1">Date</p>
+                                <p id="list-group-1">Group</p>
                             </li>
                             <li class="list-item">
-                                <img src="" id="group-img-2">
+                                <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-2">Item</p>
                                 <p id="list-expiration-2">Date</p>
+                                <p id="list-group-2">Group</p>
                             </li>
                             <li class="list-item">
-                                <img src="" id="group-img-3">
+                                <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-3">Item</p>
                                 <p id="list-expiration-3">Date</p>
+                                <p id="list-group-3">Group</p>
                             </li>
                         </ul>
                 </div>
