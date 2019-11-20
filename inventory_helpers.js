@@ -10,6 +10,7 @@ var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
 function __init__() {
     document.getElementById('add-form').style.display = "none";
     document.getElementById('food-list').style.display = "none";
+    return false;
 }
 
 function openForm() {
@@ -21,6 +22,7 @@ function openForm() {
     else {
         console.log("Already open");
     }
+    return false;
 }
 
 function closeForm() {
@@ -29,27 +31,32 @@ function closeForm() {
         console.log("Form closed");
         __openStatus__ = false;
     }
+    return false;
 }
 
 function checkEmpty() {
-    if (expData == null || foodGroup == null || foodName == null) {
+    if (expData == null || selectedGroup == null || foodName == null) {
         alert("Fill All Fields!");
         checkedOkay = false;
     }
     else {
-        console.log("Submitted successfully");
+        console.log("Submitted");
+        document.getElementById('add-form').style.display = "none";
         checkedOkay = true;
     }
+    return false;
 }
 
 function openForm() {
-    document.getElementById('food-list').style.display = "block";
+    document.getElementById('add-form').style.display = "block";
     console.log("Submitted!");
+    return false;
 }
 
 function addListItem() {
     if (checkedOkay == true) {
-        openForm();
+        document.getElementById('food-list').style.display = "block";
+        document.getElementById('list-item-'+listCounter).style.display="block";
         document.getElementById('list-name-'+listCounter).innerHTML = foodName;
         document.getElementById('list-expiration-'+listCounter).innerHTML = expData;
         document.getElementById('list-group-'+listCounter).innerHTML = selectedGroup;
@@ -58,12 +65,8 @@ function addListItem() {
     else {
         console.log("Didn't pass check");
     }
-    
+    return false;
 //    document.getElementById('group-img-'+listCounter).src = 
-}
-
-function findGroup() {
-
 }
 
 __init__();
