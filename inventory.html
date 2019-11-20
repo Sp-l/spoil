@@ -46,7 +46,7 @@
                     <button id="add-item-button" onclick="openForm()" type="button">
                             <img src="ref_images/add_button.png" height="30px" width="30px">
                     </button>
-                    <form id="add-form" onsubmit="checkEmpty()" onsubmit="return false">
+                    <form id="add-form" onsubmit="checkEmpty(); return false">
                         <h3>Add Item</h3>
                         <input id="food-name" placeholder="Name" type="text">
                         <select id="group-name">
@@ -65,19 +65,19 @@
 
                         <ul id="food-list">
                             <h4>Inventory</h4>
-                            <li class="list-item">
+                            <li id="list-item-1">
                                 <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-1">Item</p>
                                 <p id="list-expiration-1">Date</p>
                                 <p id="list-group-1">Group</p>
                             </li>
-                            <li class="list-item">
+                            <li id="list-item-2">
                                 <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-2">Item</p>
                                 <p id="list-expiration-2">Date</p>
                                 <p id="list-group-2">Group</p>
                             </li>
-                            <li class="list-item">
+                            <li id="list-item-3">
                                 <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-3">Item</p>
                                 <p id="list-expiration-3">Date</p>
