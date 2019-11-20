@@ -117,6 +117,16 @@ body {
     font-size: 35px;
 }
 
+#spoil-logo {
+    position: absolute;
+    bottom: 55%;
+    right: 81%;
+    width: 200px;
+    height: 200px;
+    background: none;
+    border: none;
+}
+
 #item-tip {
     text-align: center;
     background-color: whitesmoke;
