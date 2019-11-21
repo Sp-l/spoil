@@ -5,11 +5,10 @@ var checkedOkay = false;
 var foodName = document.getElementById('food-name').value;
 var expData = document.getElementById('expiration-date').value;
 var foodGroup = document.getElementById('group-name');
-var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
 
 function __init__() {
     document.getElementById('add-form').style.display = "none";
-    document.getElementById('food-list').style.display = "none";
+    itemList.style.display = "none";
     return false;
 }
 
@@ -35,7 +34,7 @@ function closeForm() {
 }
 
 function checkEmpty() {
-    if (expData == null || selectedGroup == null || foodName == null) {
+    if (expData == null || foodName == null) {
         alert("Fill All Fields!");
         checkedOkay = false;
     }
