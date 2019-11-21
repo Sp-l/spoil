@@ -46,7 +46,7 @@
                     <button id="add-item-button" onclick="openForm()" type="button">
                             <img src="ref_images/add_button.png" height="30px" width="30px">
                     </button>
-                    <form id="add-form" onsubmit="checkEmpty(); return false">
+                    <form id="add-form" method="post">
                         <h3>Add Item</h3>
                         <input id="food-name" placeholder="Name" type="text">
                         <select id="group-name">
@@ -56,15 +56,16 @@
                             <option>Dairy</option>
                             <option>Grain</option>
                         </select>
-                        <input id="expiration-date" placeholder="Expiration Date" type="text">
-                        <input id="submit-button" placeholder="Submit" type="submit" onclick="addListItem()">
+                        <input id="expiration-date" placeholder="Expiration Date" type="date">
+                        <input id="submit-button" placeholder="Submit" type="button" onclick="return results()">
                         <button id="close-button" onclick="closeForm()" type="button">
                         <img src="ref_images/close_button.png">
                         </button>
                     </form>
+                    <p>Your items are: <span id="display1"></span></p>
 
-                        <ul id="food-list">
-                            <h4>Inventory</h4>
+
+                        <!-- <ul id="food-list">
                             <li id="list-item-1">
                                 <img src="ref_images/food_icon.png" class="group-img">
                                 <p id="list-name-1">Item</p>
@@ -83,7 +84,7 @@
                                 <p id="list-expiration-3">Date</p>
                                 <p id="list-group-3">Group</p>
                             </li>
-                        </ul>
+                        </ul> -->
                 </div>
             </div>
         </div>
