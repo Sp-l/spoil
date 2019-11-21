@@ -85,6 +85,44 @@ body {
     margin-bottom: 5px;
 }
 
+#title-container-main-homescreen {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    color: #d5e6da;
+    text-shadow: 2px 5px #666b67;
+    font-size: 70px;
+    margin-bottom: 5px;
+}
+
+#welcome-container {
+    position: relative;
+    text-align: center;
+    background: #cfd197;
+    height: 65%;
+    width: 65%;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-left: 17%;
+}
+
+#welcome-text {
+    padding: 10px;
+    text-align: justify;
+    display: inline-block;
+    color: black;
+}
+
+
+#spoil-logo-homescreen {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
 /* Food list container */
 #food-container{
     position: relative;
