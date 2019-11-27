@@ -43,20 +43,32 @@
                     <div id="item-tip">
                         <p>Expired items will be added automatically!</p>
                     </div>
-                    <button id="add-item-button" onclick="openForm()">
+                    <button id="add-item-button" onclick="openForm()" type="button" >
                             <img src="ref_images/add_button.png" height="30px" width="30px">
                     </button>
-                    <form id="add-form" onsubmit="getInput()">
-                        <h3>Add Item</h3>
-                        <input id="food-name" placeholder="Name" type="text">
-                        <input id="group-name" placeholder="Food Group" type="text">
-                        <input id="expiration-date" placeholder="Expiration Date" type="text">
-                        <input id="submit-button" placeholder="Submit" type="submit" onclick="checkEmpty()">
-                        <button id="close-button" onclick="closeForm()">
-                        <img src="ref_images/close_button.png">
-                        </button>
-                    </form>
+                    <button id="add-item-button" onclick="openForm()" type="button">
+                          <img src="ref_images/add_button.png" height="30px" width="30px">
+                  </button>
+                  <form id="add-form" method="post">
+                      <h3>Add Item</h3>
+                      <input id="food-name" placeholder="Name" type="text">
+                      <select id="group-name">
+                          <option>Fruits</option>
+                          <option>Veggies</option>
+                          <option selected="selected">Meat</option>
+                          <option>Dairy</option>
+                          <option>Grain</option>
+                      </select>
+                      <input id="expiration-date" placeholder="Expiration Date" type="date">
+                      <input id="submit-button" placeholder="Submit" type="button" onclick="return results()" value="Submit">
+                      <button id="close-button" onclick="closeForm()" type="button">
+                      <img src="ref_images/close_button.png">
+                      </button>
+                  </form>
+                  <p>Your items are: <ol id="display1"></ul> </p>
 
+
+<!--
                         <ul id="food-list">
                             <h4>Inventory</h4>
                             <li class="list-item">
@@ -74,7 +86,7 @@
                                 <p id="list-name-3">Item</p>
                                 <p id="list-expiration-3">Date</p>
                             </li>
-                        </ul>
+                        </ul> -->
                 </div>
             </div>
         </div>

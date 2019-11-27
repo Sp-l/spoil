@@ -1,15 +1,15 @@
 // var itemList = document.getElementById('food-list');
 // // var listCounter = 1;
-// // var __openStatus__ = false;
+var __openStatus__ = false;
 // // var checkedOkay = false;
-var foodName = document.getElementById('food-name').value;
-var expData = document.getElementById('expiration-date').value;
-var foodGroup = document.getElementById('group-name');
-var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
 
 function results(){
+  var foodName = document.getElementById('food-name').value;
+  var expData = document.getElementById('expiration-date').value;
+  var foodGroup = document.getElementById('group-name');
+  var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
 
-          if (expData == null || selectedGroup == null || foodName == null) {
+          if (expData == "" || selectedGroup == "" || foodName == "") {
           console.log(expData);
           console.log(selectedGroup);
           console.log(foodName);
@@ -19,7 +19,8 @@ function results(){
          }
          else{
 
-           display1.innerHTML="</br> Name: " + foodName + "</br> Date: " + expData + "</br> FoodGroup: " + selectedGroup;
+           display1.innerHTML += "<li> Name: " + foodName + "</br> Date: "
+           + expData + "</br> Food Group: " + selectedGroup + "</li></br> ";
            closeForm();
            document.getElementById("add-form").reset();
 
