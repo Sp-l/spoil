@@ -49,7 +49,7 @@
                     <button id="add-item-button" onclick="openForm()" type="button">
                           <img src="ref_images/add_button.png" height="30px" width="30px">
                   </button>
-                  <form id="add-form" method="post">
+                  <form id="add-form1" method="post" onsubmit="results(); return false" >
                       <h3>Add Item</h3>
                       <input id="food-name" placeholder="Name" type="text">
                       <select id="group-name">
@@ -59,50 +59,20 @@
                           <option>Dairy</option>
                           <option>Grain</option>
                       </select>
-                      <input id="expiration-date" placeholder="Expiration Date" type="date">
-                      <input id="submit-button" placeholder="Submit" type="button" onclick="return results()" value="Submit">
+                      <input id="submit-button" placeholder="Submit" type="submit" value="Submit" >
                       <button id="close-button" onclick="closeForm()" type="button">
                       <img src="ref_images/close_button.png">
                       </button>
                   </form>
-                  <p>Your items are: <ol id="display1"></ul> </p>
+                  <p>Your items are: <ol id="display2"></ol>
+                  <ol id="display1" ></p>
 
 
-<!--
-                        <ul id="food-list">
-                            <h4>Inventory</h4>
-                            <li class="list-item">
-                                <img src="" id="group-img-1">
-                                <p id="list-name-1">Item</p>
-                                <p id="list-expiration-1">Date</p>
-                            </li>
-                            <li class="list-item">
-                                <img src="" id="group-img-2">
-                                <p id="list-name-2">Item</p>
-                                <p id="list-expiration-2">Date</p>
-                            </li>
-                            <li class="list-item">
-                                <img src="" id="group-img-3">
-                                <p id="list-name-3">Item</p>
-                                <p id="list-expiration-3">Date</p>
-                            </li>
-                        </ul> -->
                 </div>
             </div>
         </div>
     </body>
-    <script src="inventory_helpers.js"></script>
-    <!--                <div id="foodForm">
-        <div id="formWindow">
-            <form action="#" id="form" method="post" name="form">
-                <img id="close" src="ref_images/close_button.png" onclick="closeForm()">
-                <h2>Add Item</h2>
-                <hr>
-                <input id="name" name="name" placeholder="Name" type="text">
-                <input id="food_group" name="food_group" placeholder="Food Group" type="text">
-                <textarea id="msg" name="message" placeholder="Message"></textarea>
-                <a href="javascript:%20check_empty()" id="submit">Confirm</a>
-            </form>
-        </div>
-        </div>-->
+    <script src="grocery_helpers.js"></script>
+
+
 </html>

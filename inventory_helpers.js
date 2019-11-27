@@ -1,26 +1,44 @@
-// var itemList = document.getElementById('food-list');
-// // var listCounter = 1;
+
 var __openStatus__ = false;
-// // var checkedOkay = false;
 
 function results(){
   var foodName = document.getElementById('food-name').value;
   var expData = document.getElementById('expiration-date').value;
   var foodGroup = document.getElementById('group-name');
   var selectedGroup = foodGroup.options[foodGroup.selectedIndex].text;
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+
+  today = yyyy + '-' + mm + '-' + dd;
 
           if (expData == "" || selectedGroup == "" || foodName == "") {
-          console.log(expData);
-          console.log(selectedGroup);
-          console.log(foodName);
           console.log("EMPTY");
           alert("Fill All Fields!");
            return false;
          }
          else{
 
-           display1.innerHTML += "<li> Name: " + foodName + "</br> Date: "
-           + expData + "</br> Food Group: " + selectedGroup + "</li></br> ";
+           if(today>expData)
+           {
+             console.log("EXPIRED");
+             alert("Item has expired will be added to Grocery List");
+             localStorage.setItem("flag", 2)
+             localStorage.setItem("name","Name: " + foodName);
+             localStorage.setItem("group","Food Group: " + selectedGroup);
+             console.log(localStorage.getItem("flag"))
+             window.open("grocerylist.html", '_self',false);
+
+           }
+           else {
+             console.log("still good");
+             localStorage.setItem("flag",1);
+             display1.innerHTML += "<li> Name: " + foodName + "</br> Date: "
+             + expData + "</br> Food Group: " + selectedGroup + "</li></br> ";
+           }
+
+
            closeForm();
            document.getElementById("add-form").reset();
 
@@ -54,37 +72,5 @@ function closeForm() {
     return false;
 }
 
-// function checkEmpty() {
-//     console.log(expData);
-//     console.log(selectedGroup);
-//     if (expData == null || selectedGroup == null || foodName == null) {
-//         console.log("EMPTY");
-//         alert("Fill All Fields!");
-//         return false;
-//
-//     }
-//     else {
-//         console.log("Submitted");
-//         document.getElementById('add-form').style.display = "none";
-//     }
-// }
-
-
-
-// function addListItem() {
-//     if (checkedOkay == true) {
-//         document.getElementById('food-list').style.display = "block";
-//         document.getElementById('list-item-'+listCounter).style.display="block";
-//         document.getElementById('list-name-'+listCounter).innerHTML = foodName;
-//         document.getElementById('list-expiration-'+listCounter).innerHTML = expData;
-//         document.getElementById('list-group-'+listCounter).innerHTML = selectedGroup;
-//         ++listCounter;
-//     }
-//     else {
-//         console.log("Didn't pass check");
-//     }
-//     return false;
-// //    document.getElementById('group-img-'+listCounter).src =
-// }
 
 __init__();
