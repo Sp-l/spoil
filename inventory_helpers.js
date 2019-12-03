@@ -68,4 +68,8 @@ function addListItem() {
 //    document.getElementById('group-img-'+listCounter).src = 
 }
 
+function checkDate() {
+
+}
+
 __init__();
