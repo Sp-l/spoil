@@ -23,7 +23,7 @@ function results(){
            if(today>expData)
            {
              console.log("EXPIRED");
-             alert("Item has expired will be added to Grocery List");
+             alert("Item has expired, will be added to Grocery List");
              localStorage.setItem("flag", 2)
              localStorage.setItem("name","Name: " + foodName);
              localStorage.setItem("group","Food Group: " + selectedGroup);
@@ -34,6 +34,7 @@ function results(){
            else {
              console.log("still good");
              localStorage.setItem("flag",1);
+             display1.style.display = "block";
              display1.innerHTML += "<li> Name: " + foodName + "</br> Date: "
              + expData + "</br> Food Group: " + selectedGroup + "</li></br> ";
            }
@@ -47,7 +48,7 @@ function results(){
 }
 
 function __init__() {
-    document.getElementById('add-form').style.display = "none";
+    display1.style.display = "none";
     return false;
 }
 

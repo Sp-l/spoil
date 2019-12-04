@@ -28,14 +28,34 @@
                         </a>
                 </p>
             </div>
+            
             <div id="main-container">
                 <div id="title-container-main">
                     Spoil
                 </div>
-                <img src="ref_images/spoil-logo.png" id="spoil-logo">
+                <div class="dropdown">
+                    <button class="dropbtn">How It Works</button>
+                    <div class="dropdown-content">
+                      <a href="#">Add items through the inventory screen.</a>
+                      <a href="#">Track expiration dates in real time.</a>
+                      <a href="#">Replace expired items by automatically adding to grocery list.</a>
+                    </div>
+                  </div>
                 <div id="fact-window-grocery">
                     <p>x Items have expired for you this week!</p>
                 </div>
+                <form id="add-form1" method="post" onsubmit="results(); return false" >
+                    <h3>Add Item</h3>
+                    <input id="food-name" placeholder="Name" type="text">
+                    <select id="group-name">
+                        <option>Fruits</option>
+                        <option>Veggies</option>
+                        <option selected="selected">Meat</option>
+                        <option>Dairy</option>
+                        <option>Grain</option>
+                    </select>
+                    <input id="submit-button" placeholder="Submit" type="submit" value="Submit" >
+                </form>
                 <div id="food-container">
                     <div id="food-container-title">
                         <h1>Grocery List</h1>
@@ -43,28 +63,7 @@
                     <div id="item-tip">
                         <p>Expired items will be added automatically!</p>
                     </div>
-                    <button id="add-item-button" onclick="openForm()" type="button" >
-                            <img src="ref_images/add_button.png" height="30px" width="30px">
-                    </button>
-                    <button id="add-item-button" onclick="openForm()" type="button">
-                          <img src="ref_images/add_button.png" height="30px" width="30px">
-                  </button>
-                  <form id="add-form1" method="post" onsubmit="results(); return false" >
-                      <h3>Add Item</h3>
-                      <input id="food-name" placeholder="Name" type="text">
-                      <select id="group-name">
-                          <option>Fruits</option>
-                          <option>Veggies</option>
-                          <option selected="selected">Meat</option>
-                          <option>Dairy</option>
-                          <option>Grain</option>
-                      </select>
-                      <input id="submit-button" placeholder="Submit" type="submit" value="Submit" >
-                      <button id="close-button" onclick="closeForm()" type="button">
-                      <img src="ref_images/close_button.png">
-                      </button>
-                  </form>
-                  <p>Your items are: <ol id="display2"></ol>
+                  <p class="flavor-text">Your items are: <ul id="display2"></ul>
                   <ol id="display1" ></p>
 
 

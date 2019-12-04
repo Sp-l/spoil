@@ -32,7 +32,19 @@
                 <div id="title-container-main">
                     Spoil
                 </div>
-                <img src="ref_images/spoil-logo.png" id="spoil-logo">
+                <form id="add-form" method="post" onsubmit="results(); return false">
+                    <h3>Add Item</h3>
+                    <input id="food-name" placeholder="Name" type="text">
+                    <select id="group-name">
+                        <option>Fruits</option>
+                        <option>Veggies</option>
+                        <option selected="selected">Meat</option>
+                        <option>Dairy</option>
+                        <option>Grain</option>
+                    </select>
+                    <input id="expiration-date" placeholder="Expiration Date" type="date">
+                    <input id="submit-button" placeholder="Submit" type="submit" value="Submit">
+                </form>
                 <div id="fact-window">
                         <p>Roughly one third of the food produced in the world for human consumption every year – approximately 1.3 billion tonnes – gets lost or wasted.</p>
                 </div>
@@ -43,26 +55,7 @@
                     <div id="item-tip">
                         <p>Your items will appear here as they are added</p>
                     </div>
-                    <button id="add-item-button" onclick="openForm()" type="button">
-                            <img src="ref_images/add_button.png" height="30px" width="30px">
-                    </button>
-                    <form id="add-form" method="post" onsubmit="results(); return false">
-                        <h3>Add Item</h3>
-                        <input id="food-name" placeholder="Name" type="text">
-                        <select id="group-name">
-                            <option>Fruits</option>
-                            <option>Veggies</option>
-                            <option selected="selected">Meat</option>
-                            <option>Dairy</option>
-                            <option>Grain</option>
-                        </select>
-                        <input id="expiration-date" placeholder="Expiration Date" type="date">
-                        <input id="submit-button" placeholder="Submit" type="submit" value="Submit">
-                        <button id="close-button" onclick="closeForm()" type="button">
-                        <img src="ref_images/close_button.png">
-                        </button>
-                    </form>
-                    <p>Your items are: <ol id="display1"></ol>
+                    <p><ol id="display1"></ol>
                     <ol id="display2" hidden></ol></p>
 
 
