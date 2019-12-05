@@ -54,6 +54,7 @@ function editDate() {
 			button_edit[i].addEventListener('click', function(){
 				var dateobj = document.getElementsByClassName('expiration');
 			  var x= button_edit.length - 1;
+				localStorage.setItem("index", x);
 					dateobj[x].innerHTML=
 					'<form id="edit-form" method="post">' +
 					'<input id="expirationDate" placeholder="Expiration Date" type="date">' +
@@ -66,7 +67,9 @@ function editDate() {
 
 function edit() {
 	var newexpData = document.getElementById('expirationDate').value;
-	document.getElementById('expiration1').innerHTML = newexpData;
+	console.log(newexpData);
+	var newdate = document.getElementsByClassName('expiration');
+	newdate[localStorage.getItem("index")].innerHTML = newexpData;
 
 	if (today > newexpData) {
 		console.log("EXPIRED");
