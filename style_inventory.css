@@ -6,7 +6,7 @@ body{
 }
 
 body:not(#title-container-main-homescreen) {
-    animation: fadeInAnimation ease 5s; 
+    animation: fadeInAnimation ease 3s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
@@ -103,9 +103,9 @@ body:not(#title-container-main-homescreen) {
 
 #title-container-main-homescreen {
     margin: 0px;
-    margin-top: -30px;
-    margin-left: -5px;
-    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    text-align: left;
     padding: 5px;
     color: #d5e6da;
     text-shadow: 2px 5px #666b67;
@@ -113,6 +113,15 @@ body:not(#title-container-main-homescreen) {
     margin-bottom: 5px;
 }
 
+#title-container-main-homescreen > p {
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 35px;
+}
 #welcome-container {
     display: none;
     position: relative;
@@ -122,16 +131,21 @@ body:not(#title-container-main-homescreen) {
     width: 60%;
     border-radius: 5px;
     border: 1px solid white;
-    margin-left: 20%;
+    margin-left: 0%;
 }
 
 #welcome-text {
+    float: left;
+    margin-left: 25px;
     width: 50%;
     text-align: left;
     padding: 10px;
     text-align: justify;
     display: inline-block;
     color: black;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid black;
 }
 
 
@@ -393,7 +407,7 @@ body:not(#title-container-main-homescreen) {
 #tool-window {
     position: absolute;
     right: 5%;
-    top: 85%;
+    top: 15%;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 3px;
@@ -414,6 +428,7 @@ body:not(#title-container-main-homescreen) {
     right: 2%;
     width: 180px;
     height: 200px;
+    resize: none;
 }
 
 .dropbtn {
@@ -454,8 +469,8 @@ body:not(#title-container-main-homescreen) {
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: absolute;
-    left: 33%;
-    top: 55%;
+    right: 10%;
+    top: 33%;
     display: inline-block;
     background-color: #3e8e41;
   }
