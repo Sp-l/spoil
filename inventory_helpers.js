@@ -17,7 +17,8 @@ function results() {
 		console.log("EMPTY");
 		alert("Fill All Fields!");
 		return false;
-	} else {
+	}
+	else {
 		if (today > expData) {
 			console.log("EXPIRED");
 			alert("Item has expired, will be added to Grocery List");
@@ -27,41 +28,45 @@ function results() {
 			console.log(localStorage.getItem("flag"))
 			window.open("grocerylist.html", '_self', false);
 
-		} else {
+		}
+		else {
 			console.log("still good");
 			localStorage.setItem("flag", 1);
 			display1.style.display = "block";
-			display1.innerHTML += "<li> Name: " + foodName +
-				'"</br> Date: <span id="expiration">"' +
-				expData + "</span> </br> Food Group: " + selectedGroup + "</li></br> " +
-				'<button id="edit-item-button" onclick="editDate()" type="button">' +
+			display1.innerHTML += "<li class='inventory-item'> Name: " + foodName +
+				'"</br> Date: <span class="expiration" id="expiration1">"' +
+				expData + "</span> </br> Food Group: " + selectedGroup +
+				'<button class="edit" id="edit-item-button" type="button" onclick="editDate()">' +
 				'<img src="ref_images/edit-button.png" height="30px" width="30px">' +
-				'</button>';
+				'</button>'  + "</li></br> " ;
 			localStorage.setItem("name", "Name: " + foodName);
 			localStorage.setItem("group", "Food Group: " + selectedGroup);
 		}
 		closeForm();
 		document.getElementById("add-form").reset();
 	}
-
 }
 
 
 function editDate() {
-	document.getElementById('expiration').innerHTML =
-		'<form id="edit-form" method="post">' +
-		'<input id="expirationDate" placeholder="Expiration Date" type="date">' +
-		'<input id="submit" placeholder="Submit"  type="button" value="Submit" onclick="edit()">' +
-		'</form>'
-	console.log(foodName);
-	var foodName = document.getElementById('food-name').value;
-
-	console.log("in edit date");
-}
+		var button_edit =document.getElementsByClassName('edit');
+		for(var i=0; i< button_edit.length; i++){
+			button_edit[i].addEventListener('click', function(){
+				var dateobj = document.getElementsByClassName('expiration');
+			  var x= button_edit.length - 1;
+					dateobj[x].innerHTML=
+					'<form id="edit-form" method="post">' +
+					'<input id="expirationDate" placeholder="Expiration Date" type="date">' +
+					'<input id="submit" placeholder="Submit" onclick="edit()" type="button" value="Submit">' +
+					'		</form>'
+					console.log("in edit date");
+			});
+		}
+	}
 
 function edit() {
 	var newexpData = document.getElementById('expirationDate').value;
-	document.getElementById('expiration').innerHTML = newexpData;
+	document.getElementById('expiration1').innerHTML = newexpData;
 
 	if (today > newexpData) {
 		console.log("EXPIRED");

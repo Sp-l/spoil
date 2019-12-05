@@ -6,19 +6,19 @@ body{
 }
 
 body:not(#title-container-main-homescreen) {
-    animation: fadeInAnimation ease 5s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-     } 
-} 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
 
 /* Main head bar styling for entire container */
 #head-bar{
@@ -221,10 +221,12 @@ body:not(#title-container-main-homescreen) {
 #edit-item-button {
     background: none;
     border: none;
+    float: right;
 }
 
 #edit-item-button > img {
-    background: none;
+    margin-bottom: 10px;
+
 }
 
 #fact-window {
@@ -338,16 +340,6 @@ body:not(#title-container-main-homescreen) {
     margin-left: 7%;
 }
 
-.list-item {
-    background-color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin: 3px;
-    width: 60%;
-    margin-left: 7%;
-    display: block;
-}
-
 .group-img {
     position: relative;
     height: 25px;
@@ -367,27 +359,27 @@ body:not(#title-container-main-homescreen) {
     border-radius: 3px;
 }
 
-#display1 {
-    background-color: #6b8772;
-    border: 1px solid gray;
-    text-align: left;
-    padding: 5px;
-    border-radius: 5px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+.inventory-item{
+  background-color: #6b8772;
+  border: 1px solid gray;
+  text-align: left;
+  padding: 12px;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-#display2 {
-    margin-left: 25%;
-    text-align: left;
-    width: 49.5%;
-    height: 45px;
-    background: whitesmoke;
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 3px;
-    list-style-type: none;
+.grocery-item{
+  margin-left: 19%;
+  text-align: left;
+  width: 49.5%;
+  height: 45px;
+  background: whitesmoke;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  list-style-type: none;
 }
 
 #tool-window {
@@ -427,7 +419,7 @@ body:not(#title-container-main-homescreen) {
     border-radius: 5px;
     text-shadow: 3px 4px lightslategrey;
   }
-  
+
   .dropbtn1 {
     text-align: left;
     color: #666b67;
@@ -466,7 +458,7 @@ body:not(#title-container-main-homescreen) {
     top: 50%;
     display: inline-block;
   }
-  
+
   #dropdown-inv {
     position: absolute;
     right: 1%;
@@ -485,7 +477,7 @@ body:not(#title-container-main-homescreen) {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
@@ -493,10 +485,10 @@ body:not(#title-container-main-homescreen) {
     text-decoration: none;
     display: block;
   }
-  
+
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd;}
-  
+
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   #dropdown-add:hover .dropdown-content {display: block;}
