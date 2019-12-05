@@ -1,7 +1,7 @@
 /* Set global background/font*/
 
 body{
-    background-color: #d6f7cb;
+    background-image: linear-gradient(#aef2ac, #ebdcca);
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -82,7 +82,8 @@ body:not(#title-container-main-homescreen) {
     margin-top: 15px;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    background-color: #4a855a;
+    /*background-color: #4a855a;*/
+    background-image: linear-gradient(#4a855a,#7b8f7b);
     width: 95%;
     height: 600px;
     display: inline-block;
@@ -137,7 +138,7 @@ body:not(#title-container-main-homescreen) {
 #welcome-text {
     float: left;
     margin-left: 25px;
-    width: 50%;
+    width: 44%;
     padding: 10px;
     text-align: justify;
     display: inline-block;
