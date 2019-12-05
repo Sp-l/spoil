@@ -408,6 +408,14 @@ body:not(#title-container-main-homescreen) {
     margin-left: 10%;
 }
 
+#notepad {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    width: 180px;
+    height: 200px;
+}
+
 .dropbtn {
     font-family: 'Quicksand', sans-serif;
     background: none;
